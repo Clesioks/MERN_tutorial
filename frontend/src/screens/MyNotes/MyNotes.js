@@ -46,9 +46,7 @@ const MyNotes = () => {
                   borderStyle: "none",
                 }}
               >
-                <Accordion.Header as={Card.Text} eventKey="0">
-                  {note.title}
-                </Accordion.Header>
+                <Accordion.Header as={Card.Text}>{note.title}</Accordion.Header>
               </span>
               <div>
                 <Button href={`/note/${note._id}`}>Edit</Button>
@@ -61,7 +59,7 @@ const MyNotes = () => {
                 </Button>
               </div>
             </Card.Header>
-            <Accordion.Body eventKey="0">
+            <Accordion.Body>
               <Card.Body>
                 <h4>
                   <Badge bg="success" text="light">
