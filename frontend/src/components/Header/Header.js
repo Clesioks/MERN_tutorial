@@ -30,6 +30,7 @@ const Header = () => {
           </Nav>
           <Nav>
             <Nav.Link>
+              {" "}
               <Link to="/mynotes"> Minhas anotações</Link>
             </Nav.Link>
             <NavDropdown title="TiTi" id="basic-nav-dropdown">
