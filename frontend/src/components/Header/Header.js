@@ -8,15 +8,12 @@ import {
 } from "react-bootstrap";
 
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <Navbar bg="primary" expand="lg" variant="dark">
       <Container>
-        <Navbar.Brand>
-          <Link to="/">Note Zipper</Link>
-        </Navbar.Brand>
+        <Navbar.Brand href="/">Note Zipper</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
@@ -29,10 +26,7 @@ const Header = () => {
             </Form>
           </Nav>
           <Nav>
-            <Nav.Link>
-              {" "}
-              <Link to="/mynotes"> Minhas anotações</Link>
-            </Nav.Link>
+            <Nav.Link href="/mynotes">Minhas anotações</Nav.Link>
             <NavDropdown title="TiTi" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">
                 Minha conta
