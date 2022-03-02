@@ -9,7 +9,11 @@ import {
 
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
 const Header = () => {
+  const navigate = useNavigate();
+
   return (
     <Navbar bg="primary" expand="lg" variant="dark">
       <Container>
@@ -32,7 +36,12 @@ const Header = () => {
                 Minha conta
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
+              <NavDropdown.Item
+                onClick={() => {
+                  localStorage.removeItem("userInfo");
+                  navigate("/");
+                }}
+              >
                 Desconectar
               </NavDropdown.Item>
             </NavDropdown>
