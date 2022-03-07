@@ -32,6 +32,12 @@ const notes = [
       "Made my first App in React JS, feels awesome to learn something new. I aim to be a full stack dev someday",
     category: "Aprendendo",
   },
+  {
+    _id: "6",
+    title: "Gremio",
+    content: "Copando américa",
+    category: "Aprendendo",
+  },
 ];
 
 export default notes;

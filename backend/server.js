@@ -3,6 +3,7 @@ import notes from "../backend/data/notes.js";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import userRoutes from "./routes/userRoutes.js";
+import noteRoutes from "./routes/noteRoutes.js";
 import { errorHandler, notFound } from "./middlewares/errorMiddlewares.js";
 
 const app = express();
@@ -19,6 +20,8 @@ app.get("/api/notes", (req, res) => {
 });
 
 app.use("/api/users", userRoutes);
+app.use("/api/notes", noteRoutes);
+
 app.use(notFound);
 app.use(errorHandler);
 
