@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Button, Container, Row } from "react-bootstrap";
 import "./LandingPage.css";
 
