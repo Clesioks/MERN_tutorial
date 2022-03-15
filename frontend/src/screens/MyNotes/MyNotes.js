@@ -16,6 +16,12 @@ const MyNotes = () => {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
+  const noteCreate = useSelector((state) => state.noteCreate);
+  const { success: successCreate } = noteCreate;
+
+  const noteUpdate = useSelector((state) => state.noteUpdate);
+  const { success: successUpdate } = noteUpdate;
+
   const deleteHandler = (id) => {
     if (window.confirm("Are you sure?")) {
     }
@@ -30,7 +36,7 @@ const MyNotes = () => {
     if (!userInfo) {
       navigate("/");
     }
-  }, [dispatch]);
+  }, [dispatch, successCreate, navigate, userInfo, successUpdate]);
 
   return (
     <MainScreen title={`Welcome Back ${userInfo.name}...`}>
@@ -41,7 +47,7 @@ const MyNotes = () => {
       </Link>
       {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
       {loading && <Loading />}
-      {notes?.map((note) => (
+      {notes?.reverse().map((note) => (
         <Accordion key={note._id}>
           <Card style={{ margin: 10 }}>
             <Card.Header style={{ display: "flex" }}>
