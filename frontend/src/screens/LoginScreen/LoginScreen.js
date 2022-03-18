@@ -8,7 +8,7 @@ import "./LoginScreen.css";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../actions/userActions";
 
-const LoginScreen = ({ history }) => {
+const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 

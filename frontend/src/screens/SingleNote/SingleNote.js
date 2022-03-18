@@ -4,7 +4,7 @@ import { Button, Card, Form } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { updateNoteAction } from "../../actions/notesActions";
+import { deleteNoteAction, updateNoteAction } from "../../actions/notesActions";
 import ErrorMessage from "../../components/ErrorMessage";
 import Loading from "../../components/Loading";
 import MainScreen from "../../components/MainScreen";
@@ -17,9 +17,20 @@ function SingleNote() {
   const [date, setDate] = useState("");
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const noteUpdate = useSelector((state) => state.noteUpdate);
   const { loading, error } = noteUpdate;
+
+  const noteDelete = useSelector((state) => state.noteDelete);
+  const { loading: loadingDelete, error: errorDelete } = noteDelete;
+
+  const deleteHandler = (id) => {
+    if (window.confirm("Are you sere?")) {
+      dispatch(deleteNoteAction(id));
+    }
+    navigate("/mynotes");
+  };
 
   useEffect(() => {
     const fetching = async () => {
@@ -40,8 +51,6 @@ function SingleNote() {
     setContent("");
   };
 
-  const navigate = useNavigate();
-
   const updateHandler = (e) => {
     e.preventDefault();
     dispatch(updateNoteAction(id, title, content, category));
@@ -57,10 +66,10 @@ function SingleNote() {
         <Card.Header>Edit your Note</Card.Header>
         <Card.Body>
           <Form onSubmit={updateHandler}>
-            {/*{loadingDelete && <Loading />} */}
-            {/* {errorDelete && (
+            {loadingDelete && <Loading />}
+            {errorDelete && (
               <ErrorMessage variant="danger">{errorDelete}</ErrorMessage>
-            )}*/}
+            )}
             {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
             <Form.Group controlId="title">
               <Form.Label>Title</Form.Label>
@@ -107,7 +116,7 @@ function SingleNote() {
             <Button
               className="mx-2"
               variant="danger"
-              // onClick={() => deleteHandler(match.params.id)}
+              onClick={() => deleteHandler(id)}
             >
               Delete Note
             </Button>
