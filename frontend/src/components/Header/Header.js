@@ -42,18 +42,24 @@ const Header = ({ setSearch }) => {
               />
             </Form>
           </Nav>
-          <Nav>
-            <Nav.Link href="/mynotes">Minhas anotações</Nav.Link>
-            <NavDropdown title="TiTi" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">
-                Minha conta
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item onClick={logoutHandler}>
-                Desconectar
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
+          {userInfo ? (
+            <Nav>
+              <NavDropdown title={userInfo?.name} id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">
+                  Minha conta
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item onClick={logoutHandler}>
+                  Desconectar
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          ) : (
+            <Nav>
+              {" "}
+              <Nav.Link href="/login">Login</Nav.Link>
+            </Nav>
+          )}
         </Navbar.Collapse>
       </Container>
     </Navbar>
