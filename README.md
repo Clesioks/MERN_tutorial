@@ -13,3 +13,9 @@ Login:
 <div align="center">
 <img src="https://user-images.githubusercontent.com/45744599/161388519-5e0f2e9e-621a-4fdb-ae57-c72c1dbe112f.png" />
     </div>
+
+Editar perfil:
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/45744599/161388802-667b313c-6159-45a2-97b3-8bec20147e6a.png" />
+  </div>
