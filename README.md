@@ -19,16 +19,15 @@ Editar perfil:
 <div align="center">
 <img src="https://user-images.githubusercontent.com/45744599/161388802-667b313c-6159-45a2-97b3-8bec20147e6a.png" />
   </div>
+  
+  Todas notas:
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/45744599/162044913-f7f5e14c-638f-41b1-9623-282293587ec6.png />
+      </div>
 
 Criar uma anotação:
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/45744599/161388884-04783109-fc49-48f9-9927-593999670dc3.png" />
-  </div>
-
-Todas notas:
-
-<div align="center">
-<img src="https://user-images.githubusercontent.com/45744599/162044913-f7f5e14c-638f-41b1-9623-282293587ec6.png />
-      </div>
-      
+  </div> 
