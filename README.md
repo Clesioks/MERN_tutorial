@@ -23,8 +23,9 @@ Editar perfil:
   Todas notas:
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/45744599/162044913-f7f5e14c-638f-41b1-9623-282293587ec6.png />
-      </div>
+<img src="https://user-images.githubusercontent.com/45744599/162044913-f7f5e14c-638f-41b1-9623-282293587ec6.png" />
+  </div> 
+          
 
 Criar uma anotação:
 
