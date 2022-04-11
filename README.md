@@ -31,3 +31,8 @@ Todas notas:
 <div align="center">
 <img src="https://user-images.githubusercontent.com/45744599/162044913-f7f5e14c-638f-41b1-9623-282293587ec6.png" />
   </div> 
+
+Editar notas:
+
+<img src="https://user-images.githubusercontent.com/45744599/162799961-b7d19f20-f754-4af5-a031-a43bfa407811.png" />
+  </div> 
